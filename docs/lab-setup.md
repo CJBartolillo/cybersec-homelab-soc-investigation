@@ -27,6 +27,7 @@ powershell# Download Sysmon + Olaf config from GitHub
 4. Configure Splunk Data Input
 
 Create index: endpoint
+
 Head to your Inputs.conf file which will be found in your Splunk>etc>System>local> inputs.conf (If you don't see this file here, copy it over from your 'Default' file)
 
 ![image](https://github.com/user-attachments/assets/c63e8e12-651b-49f2-974d-96dbd72daa68)
