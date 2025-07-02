@@ -1,6 +1,9 @@
 # cybersec-homelab-soc-investigation
 # SOC Analyst Investigation Lab
 
+![image](https://github.com/user-attachments/assets/a741e1aa-68f5-4a08-8336-767efcd63b82)
+
+
 ## 🎯 Project Overview
 This project from MyDFIR (https://www.youtube.com/watch?v=kku0fVfksrk&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=1) demonstrates practical SOC (Security Operations Center) analyst skills through a controlled cybersecurity investigation in a virtualized environment. The project simulates a real-world malware incident and shows the complete investigation workflow from initial alert to containment recommendations.
 
