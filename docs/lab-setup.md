@@ -115,16 +115,21 @@ splunkindex=endpoint EventCode=1
 ✅ Validation
 
 Network: Both VMs can ping each other
+
 Splunk: Sysmon events flowing to endpoint index
+
 Attack: Meterpreter session established
+
 Detection: Malware execution visible in Splunk
 
 
 ⚠️ Lab Safety
 
 Isolated network only - no production access
+
 Take VM snapshots before malware execution
+
 Re-enable Windows Defender after testing
 
 
-Setup time: ~1 hour | Requires: VirtualBox, Windows 10, Kali Linux VMs
+Setup time: ~2 hours | Requires: VirtualBox, Windows 10, Kali Linux VMs
