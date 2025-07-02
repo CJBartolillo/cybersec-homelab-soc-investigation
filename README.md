@@ -55,3 +55,9 @@ This project from MyDFIR (https://www.youtube.com/watch?v=kku0fVfksrk&list=PLG6K
 - Practical incident response methodology
 - Technical writing and documentation skills
 - Threat hunting and proactive security monitoring
+
+## 🚀 Getting Started
+1. Review the [Lab Setup Guide](docs/lab-setup.md)
+2. Follow the [Investigation Methodology](docs/investigation-methodology.md)
+3. Explore the [Incident Analysis](investigations/incident-001-malware-execution/)
+4. Check out the [Splunk Dashboards](dashboards/)
